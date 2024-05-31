@@ -10,7 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import web.model.Employee;
+import web.model.User;
 
 import javax.sql.DataSource;
 import java.util.Objects;
@@ -53,7 +53,7 @@ public class AppConfig {
         props.put("hibernate.format_sql", env.getProperty("hibernate.format_sql"));
 
         factoryBean.setHibernateProperties(props);
-        factoryBean.setAnnotatedClasses(Employee.class);
+        factoryBean.setAnnotatedClasses(User.class);
 
         return factoryBean;
     }

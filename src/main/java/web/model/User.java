@@ -9,8 +9,8 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "employees")
-public class Employee {
+@Table(name = "users")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -22,21 +22,13 @@ public class Employee {
     @Column(name = "surname")
     private String surname;
 
-    @Column(name = "department")
-    private String department;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "salary")
-    private int salary;
+    @Column(name = "age")
+    private int age;
 
-    public Employee() {
-    }
-
-    public Employee( String name, String surname, String department, int salary) {
-
-        this.name = name;
-        this.surname = surname;
-        this.department = department;
-        this.salary = salary;
+    public User() {
     }
 
     public int getId() {
@@ -47,20 +39,20 @@ public class Employee {
         this.id = id;
     }
 
-    public int getSalary() {
-        return salary;
+    public int getAge() {
+        return age;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSurname() {
@@ -79,6 +71,11 @@ public class Employee {
         this.name = name;
     }
 
-
+    public User(String name, String surname, String email, int age) {
+        this.name = name;
+        this.surname = surname;
+        this.email = email;
+        this.age = age;
+    }
 }
 

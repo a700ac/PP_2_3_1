@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>Employee Info</h2>
+<h2>User Info</h2>
 <br>
-<form:form action="saveEmployee" modelAttribute="employee">
+<form:form action="saveUser" modelAttribute="user">
 
     <form:hidden path="id"/>
 
@@ -13,9 +13,9 @@
     <br><br>
     Surname <form:input path="surname"/>
     <br><br>
-    Department <form:input path="department"/>
+    Email <form:input path="email"/>
     <br><br>
-    Salary <form:input path="salary"/>
+    Age <form:input path="age"/>
     <br><br>
     <input type="submit" value="Ok">
 

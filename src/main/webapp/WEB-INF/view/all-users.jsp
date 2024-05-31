@@ -2,32 +2,32 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>All employees</h2>
+<h2>All users</h2>
 <br>
 <table>
     <tr>
         <th>Name</th>
         <th>Surname</th>
-        <th>Department</th>
-        <th>Salary</th>
+        <th>Email</th>
+        <th>Age</th>
         <th>Operations</th>
     </tr>
 
-    <c:forEach var="emp" items="${allEmps}">
+    <c:forEach var="usr" items="${allUsrs}">
 
         <c:url var="updateButton" value="/updateInfo">
-            <c:param name="empId" value="${emp.id}"/>
+            <c:param name="usrId" value="${usr.id}"/>
         </c:url>
 
-        <c:url var="deleteButton" value="/deleteEmployee">
-            <c:param name="empId" value="${emp.id}"/>
+        <c:url var="deleteButton" value="/deleteUser">
+            <c:param name="usrId" value="${usr.id}"/>
         </c:url>
 
     <tr>
-        <td>${emp.name}</td>
-        <td>${emp.surname}</td>
-        <td>${emp.department}</td>
-        <td>${emp.salary}</td>
+        <td>${usr.name}</td>
+        <td>${usr.surname}</td>
+        <td>${usr.email}</td>
+        <td>${usr.age}</td>
 
         <td>
             <input type="button" value="Update"
@@ -43,7 +43,7 @@
 </table>
 <br>
 <input type="button" value="Add"
-onclick="window.location.href ='addNewEmployee'"
+onclick="window.location.href ='addNewUser'"
 />
 
 </body>
